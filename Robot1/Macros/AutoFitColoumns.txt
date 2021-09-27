@@ -1,0 +1,4 @@
+Sub AutoFitColoumns()
+    Rows("1:1").Select
+    Selection.Columns.AutoFit
+End Sub
