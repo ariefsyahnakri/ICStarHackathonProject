@@ -17,7 +17,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>902.4,2873.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>902.4,2515.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ComparingExcels_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -86,9 +86,10 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Workflow ini berfungsi untuk compare file dari sumber dengan file dari feedback " DisplayName="ComparingExcels" sap:VirtualizedContainerService.HintSize="912.8,2708.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Workflow ini berfungsi untuk compare file dari sumber dengan file dari feedback " DisplayName="ComparingExcels" sap:VirtualizedContainerService.HintSize="912.8,2350.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="sumberFiles" />
       <Variable x:TypeArguments="x:String" Name="hasilMessage" />
@@ -101,24 +102,16 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="871.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Mulai Comparing Files.&quot;]" />
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Region" sap:VirtualizedContainerService.HintSize="871.2,2219.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_regionCode]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Region" sap:VirtualizedContainerService.HintSize="871.2,1860.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_regionCode]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="region" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body for each " sap:VirtualizedContainerService.HintSize="836,2084.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body for each " sap:VirtualizedContainerService.HintSize="836,1726.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
-              <Variable x:TypeArguments="sd:DataTable" Name="dtSumber">
-                <Variable.Default>
-                  <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="new DataTable" />
-                </Variable.Default>
-              </Variable>
-              <Variable x:TypeArguments="sd:DataTable" Name="dtFeedback">
-                <Variable.Default>
-                  <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="new DataTable" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="sd:DataTable" Default="[new DataTable]" Name="dtSumber" />
+              <Variable x:TypeArguments="sd:DataTable" Default="[new DataTable]" Name="dtFeedback" />
               <Variable x:TypeArguments="sd:DataTable" Name="dtCompareRight" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
@@ -179,7 +172,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="794.4,545.6" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="794.4,187.2" sap2010:WorkflowViewState.IdRef="TryCatch_4">
               <TryCatch.Try>
                 <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Read Feedback Excel Application Scope" sap:VirtualizedContainerService.HintSize="433.6,262.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_7" InstanceCachePeriod="3000" WorkbookPath="[in_fileFeedback]">
                   <ui:ExcelApplicationScope.Body>
@@ -206,10 +199,10 @@
                 </ui:ExcelApplicationScope>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,380.8" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -260,7 +253,7 @@
                       <OutArgument x:TypeArguments="x:String">[hasilMessage]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[hasilMessage+vbNewLine+"File vendor "+in_vendorCode+" dari region "+region+" sudah sesuai. File sudah disimpan di folder hasil. "]</InArgument>
+                      <InArgument x:TypeArguments="x:String">["File vendor "+in_vendorCode+" dari region "+region+" sudah sesuai. File sudah disimpan di folder hasil. "+vbNewLine+hasilMessage]</InArgument>
                     </Assign.Value>
                   </Assign>
                 </Sequence>
@@ -292,7 +285,7 @@
                       <OutArgument x:TypeArguments="x:String">[revisiMessage]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[revisiMessage+vbNewLine+"Terdapat revisi di file vendor "+in_vendorCode+ " dari region "+region+"."]</InArgument>
+                      <InArgument x:TypeArguments="x:String">["Terdapat revisi di file vendor "+in_vendorCode+ " dari region "+region+"."+vbNewLine+revisiMessage]</InArgument>
                     </Assign.Value>
                   </Assign>
                 </Sequence>

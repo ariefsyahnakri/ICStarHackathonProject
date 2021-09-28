@@ -3824,9 +3824,9 @@
     "restore": {
       "projectUniqueName": "ReminderBot",
       "projectName": "ReminderBot",
-      "projectPath": "C:\\Users\\Lenovo\\OneDrive - Telkom University\\Kuliah Extra\\UiPath - RPA\\Projek ICStar\\ROBOTS\\ReminderBot\\.local",
+      "projectPath": "C:\\Users\\Lenovo\\OneDrive - Telkom University\\Dokumen\\Kuliah Extra\\UiPath - RPA\\Projek ICStar\\ROBOTS\\ReminderBot\\.local",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\OneDrive - Telkom University\\Kuliah Extra\\UiPath - RPA\\Projek ICStar\\ROBOTS\\ReminderBot\\.local"
+      "outputPath": "C:\\Users\\Lenovo\\OneDrive - Telkom University\\Dokumen\\Kuliah Extra\\UiPath - RPA\\Projek ICStar\\ROBOTS\\ReminderBot\\.local"
     },
     "frameworks": {
       "net461": {
@@ -3847,7 +3847,7 @@
             "version": "[21.4.1, 21.4.1]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Lenovo\\AppData\\Local\\UiPath\\app-21.4.4\\runtime.json"
       }
     }
   }
