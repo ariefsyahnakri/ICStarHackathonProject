@@ -104,6 +104,53 @@
         "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.telemetry.client/1.3.18\\lib/net461/TelemetryClient.dll"
       ],
       "Path": "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.system.activities\\21.4.1"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.UIAutomation.Activities",
+        "Version": "21.4.4"
+      },
+      "Assemblies": [
+        "C:\\Users\\Lenovo\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\system.io.abstractions/3.0.10\\lib/net40/System.IO.Abstractions.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\system.threading.tasks.dataflow/5.0.0\\lib/net461/System.Threading.Tasks.Dataflow.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath/21.4.25.3292\\lib/net45/UiPath.Interop.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.ocr.activities/3.0.0\\lib/net461/UiPath.OCR.Activities.Design.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.ocr.activities/3.0.0\\lib/net461/UiPath.OCR.Activities.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.ocr.activities/3.0.0\\lib/net461/UiPath.OCR.Core.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.ocr.contracts/2.7.3\\lib/net461/UiPath.OCR.Contracts.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.platform/21.4.0\\lib/net461/UiPath.Platform.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.telemetry.client/1.3.18\\lib/net461/TelemetryClient.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities/21.4.4\\lib/net461/UiPath.CV.Activities.Design.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities/21.4.4\\lib/net461/UiPath.CV.Activities.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities/21.4.4\\lib/net461/UiPath.CV.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities/21.4.4\\lib/net461/UiPath.UIAutomation.Activities.Design.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities/21.4.4\\lib/net461/UiPath.UIAutomation.Activities.Package.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities/21.4.4\\lib/net461/UiPath.UIAutomationCore.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities/21.4.4\\lib/net461/UiPath.UIAutomationNext.Activities.Design.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities/21.4.4\\lib/net461/UiPath.UIAutomationNext.Activities.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities/21.4.4\\lib/net461/UiPath.UIAutomationNext.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities/21.4.4\\lib/net461/UiPath.UiAutomation.Activities.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities/21.4.4\\lib/net461/UiPath.Wizards.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.vision/3.0.1\\lib/net461/UiPath.Vision.AzureComputerVision.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.vision/3.0.1\\lib/net461/UiPath.Vision.Core.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.vision/3.0.1\\lib/net461/UiPath.Vision.GoogleCloud.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.vision/3.0.1\\lib/net461/UiPath.Vision.Microsoft.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.vision/3.0.1\\lib/net461/UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.vision/3.0.1\\lib/net461/UiPath.Vision.dll"
+      ],
+      "Path": "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.4"
+    },
+    {
+      "Package": {
+        "Id": "UiPathTeam.DatatablesComparison.Activities",
+        "Version": "2.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipathteam.datatablescomparison.activities/2.0.0\\lib/net461/DatatablesComparison.dll"
+      ],
+      "Path": "C:\\Users\\Lenovo\\.nuget\\packages\\uipathteam.datatablescomparison.activities\\2.0.0"
     }
   ],
   "Conflicts": [],
@@ -718,6 +765,11 @@
       "Version": "4.5.0",
       "Dependencies": []
     },
+    "UiPath": {
+      "Id": "UiPath",
+      "Version": "21.4.25.3292",
+      "Dependencies": []
+    },
     "UiPath.Excel.Activities": {
       "Id": "UiPath.Excel.Activities",
       "Version": "2.10.4",
@@ -789,6 +841,21 @@
           "Item2": "[4.5.0, )"
         }
       ]
+    },
+    "UiPath.OCR.Activities": {
+      "Id": "UiPath.OCR.Activities",
+      "Version": "3.0.0",
+      "Dependencies": [
+        {
+          "Item1": "UiPath.OCR.Contracts",
+          "Item2": "[2.7.3, )"
+        }
+      ]
+    },
+    "UiPath.OCR.Contracts": {
+      "Id": "UiPath.OCR.Contracts",
+      "Version": "2.7.3",
+      "Dependencies": []
     },
     "UiPath.Platform": {
       "Id": "UiPath.Platform",
@@ -863,6 +930,59 @@
           "Item2": "[5.0.0, )"
         }
       ]
+    },
+    "UiPath.UIAutomation.Activities": {
+      "Id": "UiPath.UIAutomation.Activities",
+      "Version": "21.4.4",
+      "Dependencies": [
+        {
+          "Item1": "UiPath",
+          "Item2": "[21.4.25.3292, 21.4.25.3292]"
+        },
+        {
+          "Item1": "UiPath.Vision",
+          "Item2": "[3.0.1, )"
+        },
+        {
+          "Item1": "UiPath.OCR.Contracts",
+          "Item2": "[2.7.3, )"
+        },
+        {
+          "Item1": "UiPath.OCR.Activities",
+          "Item2": "[3.0.0, )"
+        },
+        {
+          "Item1": "UiPath.Platform",
+          "Item2": "[21.4.0, )"
+        },
+        {
+          "Item1": "Newtonsoft.Json",
+          "Item2": "[11.0.2, )"
+        },
+        {
+          "Item1": "System.IO.Abstractions",
+          "Item2": "[3.0.10, )"
+        },
+        {
+          "Item1": "UiPath.Telemetry.Client",
+          "Item2": "[1.3.18, )"
+        }
+      ]
+    },
+    "UiPath.Vision": {
+      "Id": "UiPath.Vision",
+      "Version": "3.0.1",
+      "Dependencies": [
+        {
+          "Item1": "UiPath.OCR.Contracts",
+          "Item2": "[2.7.3, )"
+        }
+      ]
+    },
+    "UiPathTeam.DatatablesComparison.Activities": {
+      "Id": "UiPathTeam.DatatablesComparison.Activities",
+      "Version": "2.0.0",
+      "Dependencies": []
     }
   },
   "AllPackages": [
@@ -1424,6 +1544,16 @@
     },
     {
       "Package": {
+        "Id": "UiPath",
+        "Version": "21.4.25.3292"
+      },
+      "Assemblies": [
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath\\21.4.25.3292\\lib\\net45\\UiPath.Interop.dll"
+      ],
+      "Path": "C:\\Users\\Lenovo\\.nuget\\packages\\uipath\\21.4.25.3292"
+    },
+    {
+      "Package": {
         "Id": "UiPath.Excel.Activities",
         "Version": "2.10.4"
       },
@@ -1447,6 +1577,28 @@
         "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.mail.activities\\1.10.5\\lib\\net461\\UiPath.Mail.dll"
       ],
       "Path": "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.mail.activities\\1.10.5"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.OCR.Activities",
+        "Version": "3.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.ocr.activities\\3.0.0\\lib\\net461\\UiPath.OCR.Activities.Design.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.ocr.activities\\3.0.0\\lib\\net461\\UiPath.OCR.Activities.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.ocr.activities\\3.0.0\\lib\\net461\\UiPath.OCR.Core.dll"
+      ],
+      "Path": "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.ocr.activities\\3.0.0"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.OCR.Contracts",
+        "Version": "2.7.3"
+      },
+      "Assemblies": [
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.ocr.contracts\\2.7.3\\lib\\net461\\UiPath.OCR.Contracts.dll"
+      ],
+      "Path": "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.ocr.contracts\\2.7.3"
     },
     {
       "Package": {
@@ -1479,6 +1631,51 @@
         "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.telemetry.client\\1.3.18\\lib\\net461\\TelemetryClient.dll"
       ],
       "Path": "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.telemetry.client\\1.3.18"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.UIAutomation.Activities",
+        "Version": "21.4.4"
+      },
+      "Assemblies": [
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.4\\lib\\net461\\UiPath.CV.Activities.Design.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.4\\lib\\net461\\UiPath.CV.Activities.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.4\\lib\\net461\\UiPath.CV.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.4\\lib\\net461\\UiPath.UIAutomation.Activities.Design.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.4\\lib\\net461\\UiPath.UIAutomation.Activities.Package.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.4\\lib\\net461\\UiPath.UIAutomationCore.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.4\\lib\\net461\\UiPath.UIAutomationNext.Activities.Design.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.4\\lib\\net461\\UiPath.UIAutomationNext.Activities.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.4\\lib\\net461\\UiPath.UIAutomationNext.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.4\\lib\\net461\\UiPath.UiAutomation.Activities.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.4\\lib\\net461\\UiPath.Wizards.dll"
+      ],
+      "Path": "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.uiautomation.activities\\21.4.4"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Vision",
+        "Version": "3.0.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.vision\\3.0.1\\lib\\net461\\UiPath.Vision.AzureComputerVision.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.vision\\3.0.1\\lib\\net461\\UiPath.Vision.Core.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.vision\\3.0.1\\lib\\net461\\UiPath.Vision.GoogleCloud.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.vision\\3.0.1\\lib\\net461\\UiPath.Vision.Microsoft.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.vision\\3.0.1\\lib\\net461\\UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.vision\\3.0.1\\lib\\net461\\UiPath.Vision.dll"
+      ],
+      "Path": "C:\\Users\\Lenovo\\.nuget\\packages\\uipath.vision\\3.0.1"
+    },
+    {
+      "Package": {
+        "Id": "UiPathTeam.DatatablesComparison.Activities",
+        "Version": "2.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\Lenovo\\.nuget\\packages\\uipathteam.datatablescomparison.activities\\2.0.0\\lib\\net461\\DatatablesComparison.dll"
+      ],
+      "Path": "C:\\Users\\Lenovo\\.nuget\\packages\\uipathteam.datatablescomparison.activities\\2.0.0"
     }
   ]
 }

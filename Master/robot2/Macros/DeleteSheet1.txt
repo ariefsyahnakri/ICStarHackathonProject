@@ -1,0 +1,4 @@
+Sub DeleteSheet1()
+    Sheets("Sheet1").Select
+    ActiveWindow.SelectedSheets.Delete
+End Sub

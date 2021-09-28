@@ -67,10 +67,9 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Robot 3 &#xD;&#xA;&#xD;&#xA;Robot ini bertujuan untuk megirimkan email approva ke Head of GA atau mengirimkan email permintaan pencetakan invoice jika invoice sudah di approve Head of GA " DisplayName="Main" sap:VirtualizedContainerService.HintSize="836,2373.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Robot 3 &#xA;&#xA;Robot ini bertujuan untuk megirimkan email approva ke Head of GA atau mengirimkan email permintaan pencetakan invoice jika invoice sudah di approve Head of GA " DisplayName="Main" sap:VirtualizedContainerService.HintSize="836,2373.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="config" />
       <Variable x:TypeArguments="s:String[]" Name="folderHasil" />
@@ -86,7 +85,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:BuildDataTable DataTable="[dtLog]" DisplayName="Build Log Data Table" sap:VirtualizedContainerService.HintSize="794.4,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;DATE&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TIME&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;INFO&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;MESSAGE&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke initAllSettings workflow" sap:VirtualizedContainerService.HintSize="794.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Workflows\initAllSettings.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke initAllSettings workflow" sap:VirtualizedContainerService.HintSize="794.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="approval\Workflows\initAllSettings.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_config">[config]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
@@ -123,7 +122,7 @@
               <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(config("folderHasil").ToString+"\"+system.DateTime.Now.ToString("MMM-yyyy").ToUpper,"*.xlsx")]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Account="[config(&quot;emailAccount&quot;).ToString]" AttachmentsCollection="[folderHasil]" Body="[&quot;Dear Pak Henry,&lt;br&gt;&lt;br&gt;Mohon dibantu approval invoice OB dan Satpam bulan &quot; +system.datetime.now.tostring(&quot;MMMM yyyy&quot;)+&quot;. Silahkan klik link dibawah ini untuk mengirimkan email approval ke robot. &lt;br&gt;&lt;br&gt;&lt;a href=&quot;&quot;mailto:robot.nasgor@gmail.com?subject=APPROVAL-&quot;+system.DateTime.now.ToString(&quot;MMM-yyyy&quot;).ToUpper+&quot; &amp;body=Approved&quot;&quot;&gt;Approve&lt;/a&gt;&quot;]" DisplayName="Send Mail with Multiple Attachments" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="Permintaan Approval Invoice Vendor Satpam dan OB" To="[config(&quot;emailHeadOfGA&quot;).ToString]">
+          <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Account="[config(&quot;emailAccount&quot;).ToString]" AttachmentsCollection="[folderHasil]" Body="[&quot;Dear Pak Henry,&lt;br&gt;&lt;br&gt;Mohon dibantu approval invoice OB dan Satpam bulan &quot; +system.datetime.now.tostring(&quot;MMMM yyyy&quot;)+&quot;. Silahkan klik link dibawah ini untuk mengirimkan email approval ke robot. &lt;br&gt;&lt;br&gt;&lt;a href=&quot;&quot;mailto:robot.nasgor@gmail.com?subject=APPROVAL-&quot;+system.DateTime.now.ToString(&quot;MMM-yyyy&quot;).ToUpper+&quot; &amp;body=Approved&quot;&quot;&gt;Approve&lt;/a&gt;&quot;]" DisplayName="Send Mail with Multiple Attachments" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="Permintaan Approval Invoice Vendor Security dan OB" To="[config(&quot;emailHeadOfGA&quot;).ToString]">
             <ui:SendOutlookMail.Files>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
             </ui:SendOutlookMail.Files>
@@ -187,9 +186,7 @@
           <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[emailBody]" DisplayName="Send to RESIK Vendor" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="[&quot;Cetak Invoice OB Adira &quot;+ system.DateTime.now.tostring(&quot;MMMM yyyy&quot;)]" To="[config(&quot;emailNSA&quot;).ToString]">
             <ui:SendOutlookMail.Files>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                <InArgument x:TypeArguments="x:String">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="resikFile" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String">[resikFile]</InArgument>
               </scg:List>
             </ui:SendOutlookMail.Files>
           </ui:SendOutlookMail>
